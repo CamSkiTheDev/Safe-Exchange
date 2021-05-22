@@ -8,8 +8,6 @@ function Main(props) {
 
     const URL = ""
 
-    const 
-
     return (
         <main>
             <Switch>
