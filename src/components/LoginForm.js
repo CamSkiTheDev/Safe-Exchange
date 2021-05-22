@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 export default function LoginForm() {
@@ -31,26 +32,44 @@ export default function LoginForm() {
   useEffect(() => console.log(currentUser), [currentUser]);
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
-      <input
-        className="form-input"
-        type="email"
-        name="email"
-        placeholder="Email"
-        value={formData.email}
-        onChange={handleChange}
-      />
-      <input
-        className="form-input"
-        type="password"
-        name="password"
-        placeholder="Password"
-        value={formData.password}
-        onChange={handleChange}
-      />
-      <button className="form-button" type="submit">
-        Login
-      </button>
-    </form>
+    <>
+      <form className="form" onSubmit={handleSubmit}>
+        <div className="field">
+          <p className="control has-icons-left">
+            <input
+              className="input"
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+            <span className="icon is-small is-left">
+              <i className="fas fa-envelope"></i>
+            </span>
+          </p>
+        </div>
+        <div className="field">
+          <p className="control has-icons-left">
+            <input
+              className="input"
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={formData.password}
+              onChange={handleChange}
+            />
+            <span className="icon is-small is-left">
+              <i className="fas fa-unlock"></i>
+            </span>
+          </p>
+        </div>
+        <Link to="/signup">Don't have an account?</Link>
+        <br />
+        <button className="button is-primary" type="submit">
+          Login
+        </button>
+      </form>
+    </>
   );
 }

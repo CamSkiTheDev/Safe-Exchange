@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 export default function SignupForm() {
@@ -37,31 +38,54 @@ export default function SignupForm() {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <input
-        className="form-input"
-        type="email"
-        name="email"
-        placeholder="Email"
-        value={formData.email}
-        onChange={handleChange}
-      />
-      <input
-        className="form-input"
-        type="password"
-        name="password"
-        placeholder="Password"
-        value={formData.password}
-        onChange={handleChange}
-      />
-      <input
-        className="form-input"
-        type="password"
-        name="confirmPassword"
-        placeholder="Confirm Password"
-        value={formData.confirmPassword}
-        onChange={handleChange}
-      />
-      <button className="form-button" type="submit">
+      <div className="field">
+        <p className="control has-icons-left">
+          <input
+            className="input"
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+          <span className="icon is-small is-left">
+            <i className="fas fa-envelope"></i>
+          </span>
+        </p>
+      </div>
+      <div className="field">
+        <p className="control has-icons-left">
+          <input
+            className="input"
+            type="password"
+            name="password"
+            placeholder="Password"
+            value={formData.password}
+            onChange={handleChange}
+          />
+          <span className="icon is-small is-left">
+            <i className="fas fa-lock"></i>
+          </span>
+        </p>
+      </div>
+      <div className="field">
+        <p className="control has-icons-left">
+          <input
+            className="input"
+            type="password"
+            name="confirmPassword"
+            placeholder="Confirm Password"
+            value={formData.confirmPassword}
+            onChange={handleChange}
+          />
+          <span className="icon is-small is-left">
+            <i className="fas fa-lock"></i>
+          </span>
+        </p>
+      </div>
+      <Link to="/login">Already have an account?</Link>
+      <br />
+      <button className="button is-primary" type="submit">
         Sign Up
       </button>
     </form>

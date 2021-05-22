@@ -1,13 +1,10 @@
-import './App.css';
-import { Route, Switch } from "react-router-dom";
+import "./App.css";
+import "bulma/css/bulma.min.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
-import Logs from "./pages/Logs";
-import Show from "./pages/Show";
 
 function App() {
-
   const URL = "";
 
   return (
