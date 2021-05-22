@@ -4,6 +4,12 @@ import Logs from "../pages/Logs";
 import Show from "../pages/Show"
 
 function Main(props) {
+    const [logs, setLogs] = useState(null)
+
+    const URL = ""
+
+    const 
+
     return (
         <main>
             <Switch>

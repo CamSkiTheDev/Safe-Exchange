@@ -6,6 +6,12 @@ function Header(props) {
             <Link to="/">
                 <div>View all logs</div>
             </Link>
+            <Link to="/">
+                <div>Login</div>
+            </Link>
+            <Link to="/">
+                <div>Sign-up</div>
+            </Link>
         </nav>
     );
 }
