@@ -5,16 +5,21 @@ function Header(props) {
   const { logout, currentUser } = useAuth();
 
   return (
-    <nav>
-      <Link to="/">
-        <div>View all logs</div>
-      </Link>
-      {currentUser ? (
-        <Link onClick={logout}>Logout</Link>
-      ) : (
-        <Link to="login">Login</Link>
-      )}
-    </nav>
+      <div >
+        <nav className="navbar is-primary">
+            <Link to="/" className="navbar-item">
+                <img src="https://storage.googleapis.com/dpss-wordpress-prod/2/2017/01/Safe-Exchange-Zone-Logo.png"></img>
+            </Link>
+            <Link to="/">
+                <div>View all logs</div>
+            </Link>
+        {currentUser ? (
+            <Link onClick={logout}>Logout</Link>
+        ) : (
+            <Link to="login">Login</Link>
+        )}
+        </nav>
+    </div>
   );
 }
 
