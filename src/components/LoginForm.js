@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 export default function LoginForm() {
   const { login, currentUser } = useAuth();
+  const history = useHistory();
   const initialFormData = {
     email: "",
     password: "",
@@ -23,13 +24,14 @@ export default function LoginForm() {
 
     try {
       await login(formData.email, formData.password);
+      history.push("/logs");
     } catch (error) {
       console.log(error);
       alert("Unable to login.");
     }
   };
 
-  useEffect(() => console.log(currentUser), [currentUser]);
+  useEffect(() => (currentUser ? history.push("/logs") : null), [currentUser]);
 
   return (
     <>
