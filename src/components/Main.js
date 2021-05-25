@@ -9,9 +9,7 @@ function Main(props) {
   return (
     <main>
       <Switch>
-        <Route exact path="/">
-          <Logs />
-        </Route>
+        <PrivateRoute exact path="/logs" component={Logs} />
         <PrivateRoute path="/logs/:id" component={Show} />
         <Route path="/login" render={(rp) => <Login {...rp} />} />
         <Route path="/signup" render={(rp) => <Signup {...rp} />} />
