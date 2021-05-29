@@ -5,6 +5,7 @@ import { useAuth } from "../context/AuthContext";
 export default function SignupForm() {
   const { signup, currentUser } = useAuth();
   const initialFormData = {
+    name: "",
     email: "",
     password: "",
     confirmPassword: "",
@@ -27,17 +28,30 @@ export default function SignupForm() {
       return alert("Your passwords don't match");
 
     try {
-      await signup(formData.email, formData.password);
+      await signup(formData.email, formData.password, formData.name);
     } catch (error) {
       console.log(error);
       alert("Unable to create new user.");
     }
   };
 
-  useEffect(() => console.log(currentUser), [currentUser]);
-
   return (
     <form className="form" onSubmit={handleSubmit}>
+      <div className="field">
+        <p className="control has-icons-left">
+          <input
+            className="input"
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            value={formData.name}
+            onChange={handleChange}
+          />
+          <span className="icon is-small is-left">
+            <i className="fas fa-envelope"></i>
+          </span>
+        </p>
+      </div>
       <div className="field">
         <p className="control has-icons-left">
           <input
