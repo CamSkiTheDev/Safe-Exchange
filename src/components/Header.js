@@ -13,11 +13,6 @@ function Header(props) {
                 </Link>
             </div>
             <div className="navbar-end">
-                <div className="navbar-item button is-warning">
-                    <Link to="/logs">
-                        <div>View all logs</div>
-                    </Link>
-                </div>
                 <div className="navbar-item button is-danger">
                 {currentUser ? (
                     <Link onClick={logout}>Logout</Link>

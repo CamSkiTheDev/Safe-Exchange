@@ -1,3 +1,6 @@
+import { useState } from "react";
+import {Link} from "react-router-dom"
+
 function Logs(props) {
   const logExchange = async () =>
     window.navigator.geolocation.getCurrentPosition(async (position) => {
@@ -25,6 +28,20 @@ function Logs(props) {
       <button className="button is-primary" onClick={logExchange}>
         Log Exchange +
       </button>
+
+      <div className="card">
+        <div class="card-content hero is-link">
+          <div class="content level-left">
+            Log Date
+          </div>
+          <div class="content level-left">
+            Log Time
+          </div>
+          <div class="content level-left">
+            Geo-location
+          </div>
+         </div>
+      </div>
     </div>
   );
 }

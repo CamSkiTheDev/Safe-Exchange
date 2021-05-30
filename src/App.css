@@ -37,6 +37,15 @@
   margin: 10px;
 }
 
+.hero,
+.card {
+  border-radius: 20px !important; 
+}
+
+.logo {
+  height: 100px !important;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
