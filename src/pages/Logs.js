@@ -23,11 +23,31 @@ function Logs(props) {
       } catch (error) {}
     });
 
+    const loaded = () => {
+      return props.logs.map((log) => (
+        <div className="card">
+        <div class="card-content hero is-link">
+          <div class="content level-left">
+            <h3>{log.uid.date}</h3>
+          </div>
+          <div class="content level-left">
+            Log Time
+          </div>
+          <div class="content level-left">
+            Geo-location
+          </div>
+         </div>
+      </div>
+      ));
+    }
+
   return (
     <div className="container">
       <button className="button is-primary" onClick={logExchange}>
         Log Exchange +
       </button>
+
+      {loaded()}
 
       <div className="card">
         <div class="card-content hero is-link">
