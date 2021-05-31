@@ -80,8 +80,4 @@ function Show({
   );
 }
 
-<<<<<<< HEAD
-export default Show   
-=======
 export default Show;
->>>>>>> dev

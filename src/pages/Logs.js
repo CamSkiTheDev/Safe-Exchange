@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-import { useState } from "react";
-import {Link} from "react-router-dom"
-=======
 import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { API_URL } from "../App";
 import { useAuth } from "../context/AuthContext";
->>>>>>> dev
 
 function Logs(props) {
   const { currentUser, setLogs, logs } = useAuth();
@@ -38,25 +33,6 @@ function Logs(props) {
       }
     });
 
-<<<<<<< HEAD
-    const loaded = () => {
-      return props.logs.map((log) => (
-        <div className="card">
-        <div class="card-content hero is-link">
-          <div class="content level-left">
-            <h3>{log.uid.date}</h3>
-          </div>
-          <div class="content level-left">
-            Log Time
-          </div>
-          <div class="content level-left">
-            Geo-location
-          </div>
-         </div>
-      </div>
-      ));
-    }
-=======
   const fetchLogs = async () => {
     const response = await fetch(`${API_URL}/logs/${currentUser.uid}`);
 
@@ -68,31 +44,12 @@ function Logs(props) {
   useEffect(() => {
     fetchLogs();
   }, []);
->>>>>>> dev
 
   return (
     <div className="container">
       <button className="button is-primary" onClick={logExchange}>
         Log Exchange +
       </button>
-<<<<<<< HEAD
-
-      {loaded()}
-
-      <div className="card">
-        <div class="card-content hero is-link">
-          <div class="content level-left">
-            Log Date
-          </div>
-          <div class="content level-left">
-            Log Time
-          </div>
-          <div class="content level-left">
-            Geo-location
-          </div>
-         </div>
-      </div>
-=======
       {console.log(logs)}
       {logs
         .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
@@ -110,7 +67,6 @@ function Logs(props) {
             </p>
           </div>
         ))}
->>>>>>> dev
     </div>
   );
 }
