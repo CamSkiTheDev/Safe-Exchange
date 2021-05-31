@@ -21,7 +21,9 @@ function Landing(props) {
 <div class="card">
   <div class="card-content">
     <div class="content">
-      Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
+      This app allows a parent to safely exchange their minor child between other gaudrians. Providing logged location and video upload, this App provides a functionality 
+      that secures all parties involved. 
+      {/* Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum. */}
     </div>
   </div>
 </div>
