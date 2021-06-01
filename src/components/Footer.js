@@ -1,5 +1,11 @@
 function Footer(props) {
-    return <h1>Footer</h1>
+    return (
+        <footer class="card-footer">
+    <a href="#" class="card-footer-item">Login</a>
+    <a href="#" class="card-footer-item">Signup</a>
+
+  </footer>
+    )
 }
 
 export default Footer

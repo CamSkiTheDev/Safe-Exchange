@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: darkgrey;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,6 +35,31 @@
 
 .button {
   margin: 10px;
+}
+
+.button1 {
+  margin: 10px;
+  height: 200px;
+  width: 400px;
+  background-color:lightcoral;
+}
+
+.button2 {
+  margin: 10px;
+  height: 200px;
+  width: 400px;
+  background-color:rgb(196, 196, 61);
+}
+.box{
+  height:500px;
+  background-color: beige;
+}
+
+.main-image{
+  background-color: darkgray;
+  height:500px;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes App-logo-spin {
