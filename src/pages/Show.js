@@ -35,6 +35,15 @@ function Show({
       .then((res) => res.json())
       .then((data) => setLog(data));
 
+    // const removeLog = async () => 
+    //     await fetch(`${API_URL}/logs/one/${id}`, {
+    //         method: "PUT",
+    //         headers: {
+    //         "Content-Type": "application/json",
+    //         },
+    //         body: JSON.stringify({...log, isActive: false
+    //         });
+
   useEffect(() => {
     const log = logs.filter((log) => log._id === id)[0];
 
@@ -47,35 +56,38 @@ function Show({
   if (!log) return null;
 
   return (
-    <div className="card">
-      <div className="card-content hero is-link hero-body">
+    <div className="show-log">
         <h1 className="title is-1">Log Exchange</h1>
-        <p className="subtitle">
-          <b>Log Timestamp: </b>
-          {new Date(log.createdAt).toLocaleString()}
-        </p>
-        <p className="subtitle">
-          <b>Geoposition: </b>
-          {log.geoposition}
-        </p>
-        {log.videos.map((video) => (
-          <video src={video.URL} key={video._id} controls />
-        ))}
-      </div>
-      <div className="card-footer">
-        <div className="card-footer-item file button is-link">
-          <label className="file-label">
-            <input className="file-input" type="file" onChange={uploadVideo} />
-            <span className="file-cta">
-              <span className="file-icon">
-                <i className="fas fa-upload"></i>
-              </span>
-              <span className="file-label">Add A Video</span>
-            </span>
-          </label>
+        <div className="card box">
+        <div className="card-content">
+            
+            <p className="subtitle">
+            <b>Log Timestamp: </b>
+            {new Date(log.createdAt).toLocaleString()}
+            </p>
+            <p className="subtitle">
+            <b>Geoposition: </b>
+            {log.geoposition}
+            </p>
+            {log.videos.map((video) => (
+            <video src={video.URL} key={video._id} controls />
+            ))}
         </div>
-        <span className="card-footer-item button is-danger">Delete Log</span>
-      </div>
+        <div className="card-footer">
+            <div className="card-footer-item file button is-link">
+            <label className="file-label">
+                <input className="file-input" type="file" onChange={uploadVideo} />
+                <span className="file-cta">
+                <span className="file-icon">
+                    <i className="fas fa-upload"></i>
+                </span>
+                <span className="file-label">Add A Video</span>
+                </span>
+            </label>
+            </div>
+            <span className="card-footer-item button is-danger">Delete Log</span>
+        </div>
+        </div>
     </div>
   );
 }
