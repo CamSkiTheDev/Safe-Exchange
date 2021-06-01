@@ -9,9 +9,10 @@ export const API_URL = "https://safe-exchange-api.herokuapp.com";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App container is-max-widescreen">
       <Header />
       <Main />
+      <Footer />
     </div>
   );
 }

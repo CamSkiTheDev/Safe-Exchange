@@ -9,36 +9,6 @@ import Landing from "../pages/Landing"
 import { useAuth } from "../context/AuthContext";
 
 function Main(props) {
-  const { currentUser, setLogs, logs } = useAuth();
-
-  const URL = "https://safe-exchange-api.herokuapp.com/";
-
-  const getLogs = async () => {
-    const response = await fetch(`${URL}/logs/one/${props.match.params.id}`);
-    const data = await response.json();
-    setLogs(data)
-  };
-
-  const createLog = async (log) => {
-    await fetch(URL , {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(log)
-    });
-    getLogs();
-  }
-
-  const deleteLogs = async (id) => {
-    await fetch(URL + id, {
-      method: "delete"
-    });
-    getLogs()
-  }
-
-  useEffect(() => getLogs(), []);
-
   return (
     <main>
       <Switch>

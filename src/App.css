@@ -28,6 +28,19 @@
   color: #61dafb;
 }
 
+main,
+figure,
+nav.navbar,
+footer,
+div.App.container {
+  background-color: #00a896;
+  color: #00a896;
+}
+
+footer {
+  height: 20px !important;
+}
+
 .form {
   margin: 0 auto;
   max-width: 300px;
@@ -37,13 +50,31 @@
   margin: 10px;
 }
 
+.landing-logo {
+  max-width: 50%;
+  max-height: 50%;
+}
+
 .hero,
 .card {
   border-radius: 20px !important; 
 }
 
 .logo {
-  height: 100px !important;
+  max-width: 100px;
+  height: auto;
+  margin-left: 20px;
+}
+
+.login-btn {
+  margin-top: 30px;
+  background-color: #f0f3bd;
+  color: black;
+  width: 150px;
+}
+
+.box {
+  margin: 20px;
 }
 
 @keyframes App-logo-spin {

@@ -4,16 +4,20 @@ import { useAuth } from "../context/AuthContext";
 function Header(props) {
   const { logout, currentUser } = useAuth();
 
+  if (window.location.pathname === '/') return null;
+
   return (
-      <div >
-        <nav className="navbar is-primary">
-            <div className="navbar-item">
-                <Link to="/" className="navbar-item">
-                    <img src="https://storage.googleapis.com/dpss-wordpress-prod/2/2017/01/Safe-Exchange-Zone-Logo.png" className="logo" width="112" height="40"></img>
-                </Link>
+      <div>
+        <nav className="navbar">
+            <div className="navbar-brand">
+                <div className="is-flex is-justify-content-center">
+                    <Link to="/logs">
+                        <img src="https://i.imgur.com/X4jryUL.png" className="logo"></img>
+                    </Link>
+                </div>
             </div>
             <div className="navbar-end">
-                <div className="navbar-item button is-danger">
+                <div className="navbar-item button login-btn">
                 {currentUser ? (
                     <Link onClick={logout}>Logout</Link>
                 ) : (
