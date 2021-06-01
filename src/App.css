@@ -28,6 +28,67 @@
   color: #61dafb;
 }
 
+main,
+figure,
+nav.navbar,
+footer,
+div.App.container,
+.landing {
+  background-color: #bdd5ea;
+  color: black;
+}
+
+.landing {
+  border-top: #bdd5ea;
+}
+
+.is-fullheight-100vh{
+  height:40vh;
+}
+
+.show-log {
+  height: 100vh;
+}
+
+footer {
+  height: 20px !important;
+}
+
+.form {
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+.button {
+  margin: 10px;
+}
+
+.landing-logo {
+  max-width: 75%;
+  max-height: 75%;
+}
+
+.hero,
+.card {
+  border-radius: 20px !important; 
+}
+
+.logo {
+  max-width: 100px;
+  height: auto;
+  margin-left: 20px;
+}
+
+.login-btn {
+  margin-top: 30px;
+  background-color: #edf2f4;
+  color: black;
+}
+
+.box {
+  margin: 20px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
