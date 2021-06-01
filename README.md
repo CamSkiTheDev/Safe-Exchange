@@ -7,7 +7,7 @@
 4. [FAQs](#faqs)
 
 ### General Info
--   an app used to make co-parenting eaiser. Allows the user to pick/track times to meet with their kids to avoid confusion
+-   an app used to make co-parenting eaiser. Allows the user to pick/track times to meet to exchange their kids to avoid confusion
 
 ### Live Link:  https://practical-ardinghelli-eaf989.netlify.app/
 
@@ -16,7 +16,6 @@
 - Express
 - React
 - Node.js
-- Geolocater ()
 
 ## Installation 
 - git clone https://github.com/CamSkiTheDev/safe-exchange.git
