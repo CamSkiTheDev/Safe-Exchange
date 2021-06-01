@@ -32,9 +32,22 @@ main,
 figure,
 nav.navbar,
 footer,
-div.App.container {
-  background-color: #00a896;
-  color: #00a896;
+div.App.container,
+.landing {
+  background-color: #bdd5ea;
+  color: black;
+}
+
+.landing {
+  border-top: #bdd5ea;
+}
+
+.is-fullheight-100vh{
+  height:40vh;
+}
+
+.show-log {
+  height: 100vh;
 }
 
 footer {
@@ -51,8 +64,8 @@ footer {
 }
 
 .landing-logo {
-  max-width: 50%;
-  max-height: 50%;
+  max-width: 75%;
+  max-height: 75%;
 }
 
 .hero,
@@ -68,9 +81,8 @@ footer {
 
 .login-btn {
   margin-top: 30px;
-  background-color: #f0f3bd;
+  background-color: #edf2f4;
   color: black;
-  width: 150px;
 }
 
 .box {

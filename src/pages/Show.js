@@ -56,10 +56,10 @@ function Show({
   if (!log) return null;
 
   return (
-    <div>
+    <div className="show-log">
         <h1 className="title is-1">Log Exchange</h1>
-        <div className="card">
-        <div className="card-content hero is-link hero-body">
+        <div className="card box">
+        <div className="card-content">
             
             <p className="subtitle">
             <b>Log Timestamp: </b>

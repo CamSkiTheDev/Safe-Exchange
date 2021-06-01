@@ -47,7 +47,7 @@ function Logs(props) {
 
   return (
     <div className="container">
-      <button className="button is-primary" onClick={logExchange}>
+      <button className="button is-dark" onClick={logExchange}>
         Log Exchange +
       </button>
       {console.log(logs)}
